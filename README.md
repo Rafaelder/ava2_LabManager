@@ -92,10 +92,3 @@ O projeto segue uma modelagem relacional rigorosa:
 8.  **Acesse o Sistema**
     -   **Dashboard:** [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
     -   **Admin:** [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
-
-
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT.
