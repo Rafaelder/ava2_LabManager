@@ -93,11 +93,6 @@ O projeto segue uma modelagem relacional rigorosa:
     -   **Dashboard:** [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
     -   **Admin:** [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
 
-## 📸 Screenshots
-
-*(Adicione aqui prints do seu Dashboard e da Tela de Login para ilustrar o projeto)*
-
-## 🤝 Contribuição
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
 
