@@ -1,7 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import login
 from django.utils import timezone
 from .models import Laboratorio, Equipamento, Reserva
+from .forms import CadastroForm  
 
 @login_required
 def dashboard(request):
@@ -19,7 +21,7 @@ def dashboard(request):
     ).count()
 
     # Listas para as tabelas
-    equipamentos_status = Equipamento.objects.all()[:5] # Pega os 5 primeiros
+    equipamentos_status = Equipamento.objects.all()[:5]
     proximas_reservas = reservas_futuras[:5]
 
     context = {
@@ -31,3 +33,15 @@ def dashboard(request):
     }
     
     return render(request, 'core/dashboard.html', context)
+
+def register(request):
+    if request.method == 'POST':
+        form = CadastroForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user) 
+            return redirect('dashboard')
+    else:
+        form = CadastroForm()
+    
+    return render(request, 'core/register.html', {'form': form})
